@@ -428,7 +428,7 @@ class NotificationManager internal constructor(
                 playerEventHolder.updateOnPlayerActionTriggeredExternally(MediaSessionCallback.FORWARD)
             }
             STOP -> {
-                playerEventHolder.updateOnPlayerActionTriggeredExternally(MediaSessionCallback.STOP)
+                playerEventHolder.updateOnPlayerActionTriggeredExternally(MediaSessionCallback.NEXT)
             }
 
         }
@@ -792,7 +792,7 @@ class NotificationManager internal constructor(
         private const val NOTIFICATION_ID = 1
         private const val CHANNEL_ID = "kotlin_audio_player"
         private val DEFAULT_STOP_ICON =
-            com.google.android.exoplayer2.ui.R.drawable.exo_notification_stop
+            com.google.android.exoplayer2.ui.R.drawable.exo_notification_fastforward
         private val DEFAULT_REWIND_ICON =
             com.google.android.exoplayer2.ui.R.drawable.exo_notification_rewind
         private val DEFAULT_FORWARD_ICON =
