@@ -281,7 +281,7 @@ abstract class BaseAudioPlayer internal constructor(
             }
 
             override fun seekToPrevious() {
-                playerEventHolder.updateOnPlayerActionTriggeredExternally(MediaSessionCallback.PREVIOUS)
+                playerEventHolder.updateOnPlayerActionTriggeredExternally(MediaSessionCallback.PAUSE)
             }
 
             override fun seekForward() {
