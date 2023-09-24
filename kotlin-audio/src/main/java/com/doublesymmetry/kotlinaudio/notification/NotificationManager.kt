@@ -482,6 +482,7 @@ class NotificationManager internal constructor(
         override fun onCustomAction(player: Player, action: String, intent: Intent) {
             handlePlayerAction(action)
         }
+        
     }
 
     fun invalidate() {
