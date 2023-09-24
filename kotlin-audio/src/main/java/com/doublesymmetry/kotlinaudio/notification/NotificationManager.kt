@@ -428,7 +428,7 @@ class NotificationManager internal constructor(
                 playerEventHolder.updateOnPlayerActionTriggeredExternally(MediaSessionCallback.FORWARD)
             }
             STOP -> {
-                playerEventHolder.updateOnPlayerActionTriggeredExternally(MediaSessionCallback.STOP)
+                playerEventHolder.updateOnPlayerActionTriggeredExternally(MediaSessionCallback.NEXT)
             }
 
         }
@@ -545,7 +545,7 @@ class NotificationManager internal constructor(
                                 }
 
                                 is NotificationButton.STOP -> button.icon?.let {
-                                    setStopActionIconResourceId(
+                                    setNextActionIconResourceId(
                                         it
                                     )
                                 }
@@ -788,11 +788,11 @@ class NotificationManager internal constructor(
         private val needsCustomActionsToAddMissingButtons = Build.VERSION.SDK_INT >= 33
         private const val REWIND = "rewind"
         private const val FORWARD = "forward"
-        private const val STOP = "stop"
+        private const val STOP = "forward"
         private const val NOTIFICATION_ID = 1
         private const val CHANNEL_ID = "kotlin_audio_player"
         private val DEFAULT_STOP_ICON =
-            com.google.android.exoplayer2.ui.R.drawable.exo_notification_stop
+            com.google.android.exoplayer2.ui.R.drawable.exo_notification_fastforward
         private val DEFAULT_REWIND_ICON =
             com.google.android.exoplayer2.ui.R.drawable.exo_notification_rewind
         private val DEFAULT_FORWARD_ICON =
